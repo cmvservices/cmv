@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CMV Boutique – Accessoires informatiques, GSM et produits numériques</title>
+  <meta name="description" content="CMV Boutique : accessoires informatiques et GSM livrés chez vous, logiciels, documents et cours vidéo à télécharger après paiement en ligne.">
+  <meta name="theme-color" content="#0b2a6f">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="CMV SARL – Retour à l'accueil">
+        <img src="assets/images/logo-cmv-sarl-320.png" width="48" height="48" alt="Logo officiel de CMV SARL">
+        <span>CMV Boutique</span>
+      </a>
+      <a class="btn btn-outline" href="index.html"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Retour au site</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero shop-hero">
+      <div class="container">
+        <h1>CMV Boutique</h1>
+        <p class="lead">Accessoires informatiques et GSM livrés chez vous, logiciels, documents et cours vidéo disponibles dès le paiement. D'autres rayons arrivent bientôt.</p>
+        <div class="btn-row">
+          <a class="btn btn-whatsapp" id="shopWa" href="#adresse"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Écrire sur WhatsApp</a>
+          <a class="btn btn-outline-light" id="shopTel" href="#adresse"><i class="fa-solid fa-phone" aria-hidden="true"></i> Appeler</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="catalogue">
+      <div class="container">
+        <div class="filters" role="group" aria-label="Choisir un rayon">
+          <button class="filter is-active" data-shop="all" aria-pressed="true">Tout</button>
+          <button class="filter" data-shop="materiel" aria-pressed="false">Accessoires</button>
+          <button class="filter" data-shop="numerique" aria-pressed="false">Produits numériques</button>
+        </div>
+        <div class="grid grid-3" id="shopGrid"></div>
+        <ul class="shop-notes" id="adresse">
+          <li><i class="fa-solid fa-truck" aria-hidden="true"></i> Accessoires : achat en ligne et livraison. Vous hésitez ? Commandez par WhatsApp ou appelez-nous.</li>
+          <li><i class="fa-solid fa-bolt" aria-hidden="true"></i> Produits numériques : le paiement se fait sur le site, puis votre fichier vous est remis automatiquement.</li>
+          <li><i class="fa-solid fa-building" aria-hidden="true"></i> <span id="shopAddress">Adresse de la société : à renseigner.</span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p>© <span id="year">2026</span> CENTRE MULTISERVICES LA VÉRITÉ SARL. Tous droits réservés.</p>
+      <p><a href="index.html">Retour au site CMV SARL</a></p>
+    </div>
+  </footer>
+
+  <button class="cart-fab" id="cartBtn" aria-label="Ouvrir le panier" hidden><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> <span id="cartCount">0</span></button>
+  <dialog id="cartDialog" class="cart">
+    <form method="dialog" class="cart-head"><h2>Votre panier</h2><button aria-label="Fermer">&times;</button></form>
+    <ul id="cartItems"></ul>
+    <p class="cart-total">Total : <strong id="cartTotal">0 FCFA</strong></p>
+    <div class="field"><label for="livNom">Nom et téléphone</label><input id="livNom" autocomplete="name"></div>
+    <div class="field"><label for="livAdresse">Adresse de livraison</label><textarea id="livAdresse" rows="2"></textarea></div>
+    <div class="btn-row">
+      <button class="btn btn-whatsapp" id="cartWa" type="button"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Commander sur WhatsApp</button>
+      <button class="btn btn-gold" id="cartPay" type="button">Payer en ligne</button>
+    </div>
+    <p class="note" id="cartMsg" role="status"></p>
+  </dialog>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/boutique.js"></script>
+</body>
+</html>
