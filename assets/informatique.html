@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informatique | CMV SARL – Centre Multiservices La Vérité</title>
+  <meta name="description" content="Saisie et traitement de textes, rédaction de documents, CV, contrats, factures : découvrez les services informatiques du Centre Multiservices La Vérité SARL.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0b1f66;
+      --royal: #1a47c8;
+      --gold: #e3a312;
+      --ink: #4a5068;
+      --line: #dfe5f5;
+      --bg: #f6f8ff;
+      --white: #fff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: "Poppins", system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+    :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+    /* En-tête */
+    .top { position: sticky; top: 0; z-index: 10; background: var(--white); border-bottom: 1px solid var(--line); }
+    .top-in { max-width: 1000px; margin: auto; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .top img { height: 54px; width: 54px; object-fit: contain; border-radius: 50%; }
+    .btn-shop { background: var(--gold); color: var(--navy); font-weight: 600; padding: 10px 18px; border-radius: 10px; }
+    .back { font-weight: 600; color: var(--royal); }
+
+    main { max-width: 1000px; margin: auto; padding: 0 20px 60px; }
+
+    /* Titre de page */
+    .hero { padding: 36px 0 24px; }
+    .hero .ico { width: 56px; height: 56px; color: var(--royal); }
+    .hero h1 { font-size: clamp(2rem, 6vw, 3rem); color: var(--navy); line-height: 1.15; margin: 14px 0 12px; }
+    .hero p { max-width: 60ch; font-size: 1.05rem; }
+    .crumbs { font-size: .9rem; margin-bottom: 18px; }
+    .crumbs a { color: var(--royal); font-weight: 500; }
+
+    /* Liste des prestations */
+    .list { list-style: none; display: grid; gap: 12px; margin-top: 12px; }
+    .list li { display: flex; gap: 14px; align-items: flex-start; background: var(--white); border: 1px solid var(--line); border-left: 4px solid var(--gold); border-radius: 12px; padding: 16px 18px; color: var(--navy); font-weight: 500; }
+    .list svg { flex: none; width: 22px; height: 22px; margin-top: 3px; color: var(--royal); }
+    @media (min-width: 720px) { .list { grid-template-columns: 1fr 1fr; } }
+
+    /* Appel à l'action */
+    .cta { margin-top: 40px; background: var(--navy); color: var(--white); border-radius: 18px; padding: 28px 24px; }
+    .cta h2 { font-size: 1.4rem; margin-bottom: 6px; }
+    .cta p { color: #cdd6f5; margin-bottom: 18px; }
+    .cta-btns { display: flex; flex-wrap: wrap; gap: 12px; }
+    .cta-btns a { padding: 12px 22px; border-radius: 10px; font-weight: 600; }
+    .wa { background: var(--gold); color: var(--navy); }
+    .tel { border: 2px solid var(--white); }
+
+    footer { text-align: center; font-size: .85rem; padding: 24px 20px; border-top: 1px solid var(--line); }
+  </style>
+</head>
+<body>
+
+  <header class="top">
+    <div class="top-in">
+      <a href="index.html" aria-label="Retour à l'accueil">
+        <!-- Adaptez le chemin au nom réel de votre logo -->
+        <img src="assets/images/logo.png" alt="Logo CMV SARL">
+      </a>
+      <a class="btn-shop" href="boutique.html">CMV Boutique</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="crumbs"><a href="index.html#services">&larr; Tous nos services</a></p>
+      <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 4h18a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-7v2h3v2H7v-2h3v-2H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/></svg>
+      <h1>Informatique</h1>
+      <p>Du simple texte tapé au dossier complet prêt à être imprimé : nous saisissons, rédigeons et mettons en forme vos documents avec soin.</p>
+    </section>
+
+    <section aria-labelledby="prestations">
+      <h2 id="prestations" style="color:var(--navy);font-size:1.25rem;">Nos prestations</h2>
+      <ul class="list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Saisie et traitement de textes</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Rédaction et mise en forme de documents</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Saisie de mémoires, rapports et projets</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Conception de lettres administratives</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Rédaction de CV et lettres de motivation</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Création de contrats et attestations</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Conception de factures et reçus</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Pagination et mise en page professionnelle</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Création de tableaux et formulaires</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Correction et mise en forme de documents</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Reproduction de documents manuscrits</li>
+      </ul>
+    </section>
+
+    <section class="cta">
+      <h2>Un document à faire préparer ?</h2>
+      <p>Décrivez votre besoin, nous vous répondons rapidement.</p>
+      <div class="cta-btns">
+        <a class="wa" href="https://wa.me/2290197362318?text=Bonjour%2C%20je%20souhaite%20un%20service%20informatique%20%28saisie%2C%20r%C3%A9daction%2C%20mise%20en%20forme%29." target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+        <a class="tel" href="tel:+2290140494232">Appeler</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>&copy; <span id="year">2026</span> Centre Multiservices La Vérité SARL – Des solutions à portée de main</footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
