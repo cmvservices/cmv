@@ -98,11 +98,21 @@
       <div class="field">
         <label for="service">Service recherché</label>
         <select id="service" name="service">
-          <option>Informatique</option>
-          <option>Formation : Programmation web</option>
-          <option>Création de site web</option>
-          <option>CMV Boutique</option>
-          <option>Autre</option>
+         <option value="">Choisir un service</option>
+                <option>Informatique</option>
+                <option>Programmation web</option>
+                <option>Maintenance informatique</option>
+                <option>Maintenance GSM</option>
+                <option>Mécanographie</option>
+                <option>Sérigraphie</option>
+                <option>Formation : Informatique bureautique</option>
+                <option>Formation : Maintenance informatique</option>
+                <option>Formation : Maintenance GSM</option>
+                <option>Formation : Mécanographie</option>
+                <option>Formation : Programmation web</option>
+                <option>Formation : Sérigraphie</option>
+                <option>Boutique : question sur un produit</option>
+                <option>Autre</option>
         </select>
       </div>
       <div class="field">
@@ -180,5 +190,79 @@
       }
     });
   </script>
+
+
+  
+   <!-- CONTACT -->
+    <section class="section section-soft" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Parlons de votre projet</h2>
+          <p>Remplissez le formulaire : votre demande sera préparée puis envoyée via WhatsApp ou par e-mail.</p>
+        </div>
+        <div class="contact-grid">
+          <form id="contactForm" class="form" novalidate>
+            <div class="field">
+              <label for="nom">Nom complet</label>
+              <input id="nom" name="nom" type="text" autocomplete="name" required>
+              <p class="error" id="err-nom" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="tel">Numéro de téléphone</label>
+              <input id="tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" required>
+              <p class="error" id="err-tel" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="email">Adresse e-mail (facultatif)</label>
+              <input id="email" name="email" type="email" autocomplete="email">
+              <p class="error" id="err-email" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="service">Service recherché</label>
+              <select id="service" name="service" required>
+                <option value="">Choisir un service</option>
+                <option>Informatique</option>
+                <option>Programmation web</option>
+                <option>Maintenance informatique</option>
+                <option>Maintenance GSM</option>
+                <option>Mécanographie</option>
+                <option>Sérigraphie</option>
+                <option>Formation : Informatique bureautique</option>
+                <option>Formation : Maintenance informatique</option>
+                <option>Formation : Maintenance GSM</option>
+                <option>Formation : Mécanographie</option>
+                <option>Formation : Programmation web</option>
+                <option>Formation : Sérigraphie</option>
+                <option>Boutique : question sur un produit</option>
+                <option>Autre</option>
+              </select>
+              <p class="error" id="err-service" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="besoin">Description du besoin</label>
+              <textarea id="besoin" name="besoin" rows="5" required></textarea>
+              <p class="error" id="err-besoin" role="alert"></p>
+            </div>
+            <button class="btn btn-gold" type="submit">Envoyer ma demande</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+
+          <aside class="contact-info">
+            <h3>Nous joindre directement</h3>
+            <a class="btn btn-whatsapp" id="whatsappBtn" href="#contact"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Écrire sur WhatsApp</a>
+            <a class="btn btn-outline" id="phoneBtn" href="#contact"><i class="fa-solid fa-phone" aria-hidden="true"></i> Appeler</a>
+            <ul class="info-list" id="infoList">
+              <li id="addressItem" hidden><i class="fa-solid fa-location-dot" aria-hidden="true"></i> <span></span></li>
+              <li id="hoursItem" hidden><i class="fa-regular fa-clock" aria-hidden="true"></i> <span></span></li>
+              <li id="emailItem" hidden><i class="fa-regular fa-envelope" aria-hidden="true"></i> <a href="#contact"></a></li>
+            </ul>
+            <p class="note" id="contactNote">Les coordonnées (téléphone, adresse, horaires) seront affichées ici dès qu'elles seront confirmées.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  
 </body>
 </html>
+
+
